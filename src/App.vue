@@ -11,6 +11,7 @@
       <th class="px-3">Email</th>
       <th class="px-3">Ações</th>
     </thead>
+    
     <tbody>
       <tr> 
         <td></td>
