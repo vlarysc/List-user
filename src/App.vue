@@ -1,12 +1,14 @@
 <template>
-  <AppDados></AppDados>
+  <AppDados @close="close" :show="show"></AppDados>
   <div>
     <h1 class="">List User</h1>
     <div>
-      <button class="border border-black p-2" @click="open">Novo Registro</button>
+      <button class="border border-black p-2" @click="open">
+        Novo Registro
+      </button>
     </div>
-    
-    <thead class="flex ">
+
+    <thead class="flex">
       <th class="px-3">Nome</th>
       <th class="px-3">Telefone</th>
       <th class="px-3">Email</th>
@@ -14,7 +16,7 @@
     </thead>
 
     <tbody>
-      <tr> 
+      <tr>
         <td></td>
       </tr>
     </tbody>
@@ -22,18 +24,25 @@
 </template>
 
 <script setup>
-import AppDados from "./components/AppDados.vue"
+import AppDados from "./components/AppDados.vue";
 </script>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-          
-    }
- },
- methods: {
-   
- },
-}
+      show: false,
+    };
+  },
+  methods: {
+    open() {
+      this.show = true;
+      console.log("chamou open");
+    },
+    close() {
+      this.show = false;
+      console.log("chamou close");
+    },
+  },
+};
 </script>
